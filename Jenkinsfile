@@ -1,12 +1,12 @@
-pipeline{
-    agent{
+pipeline {
+    agent {
         label "any"
     }
-    tools{
-        maven: "MAVEN3"
-        jdk: "OracleJDK8"
+    tools {
+        maven 'MAVEN3' // Ensure "MAVEN3" is configured in Jenkins Global Tool Configuration
+        jdk 'OracleJDK8' // Ensure "OracleJDK8" is configured in Jenkins Global Tool Configuration
     }
-    environment{
+    environment {
         SNAP_REPO = 'vprofile-snapshot'
         NEXUS_USER = 'admin'
         NEXUS_PASS = 'admin123'
@@ -17,13 +17,11 @@ pipeline{
         NEXUS_GRP_REPO = 'vpro-maven-group'
         NEXUS_LOGIN = 'nexuslogin'
     }
-    stages{
-        stage("Build"){
-            steps{
+    stages {
+        stage("Build") {
+            steps {
                 sh 'mvn -s settings.xml -DskipTests install'
             }
-           
         }
     }
-
 }
