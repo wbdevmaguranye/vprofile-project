@@ -7,7 +7,7 @@ pipeline {
     environment {
         NEXUS_USER = 'admin'
         NEXUS_PASS = 'admin123'
-        NEXUSIP = '172.31.28.132'
+        NEXUSIP = '54.234.67.192'
         NEXUSPORT = '8081'
     }
     stages {
