@@ -5,22 +5,7 @@
 
   <servers>
     <server>
-      <id>vprofile-snapshot</id>
-      <username>${env.NEXUS_USER}</username>
-      <password>${env.NEXUS_PASS}</password>
-    </server>
-    <server>
-      <id>vprofile-release</id>
-      <username>${env.NEXUS_USER}</username>
-      <password>${env.NEXUS_PASS}</password>
-    </server>
-    <server>
-      <id>vprofile-maven-central</id>
-      <username>${env.NEXUS_USER}</username>
-      <password>${env.NEXUS_PASS}</password>
-    </server>
-    <server>
-      <id>vpro-maven-group</id>
+      <id>nexus-group-repo</id>
       <username>${env.NEXUS_USER}</username>
       <password>${env.NEXUS_PASS}</password>
     </server>
@@ -34,5 +19,4 @@
       <mirrorOf>*</mirrorOf>
     </mirror>
   </mirrors>
-
 </settings>
